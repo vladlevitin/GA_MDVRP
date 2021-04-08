@@ -4,6 +4,7 @@ import Objects.Individual;
 import Objects.Route;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class RouteScheduler {
     public RouteScheduler(){
@@ -39,6 +40,9 @@ public class RouteScheduler {
         for (int i = 0; i < gene.size(); i++) {
             if(route.depot.n_vechicles<routeList.size()){
                 System.out.println("Vechicles exceeded! Vechicle allowed: "+route.depot.n_vechicles+", Vechicles used: "+routeList.size());
+                //Collections.shuffle(gene);
+                //return phaseOneSchedule(gene,customers,depot);
+
             }
 
             Customer customer=getCustomer(gene.get(i),customers);
